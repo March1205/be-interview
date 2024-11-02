@@ -6,4 +6,6 @@ from app.api.routes import (
 
 api_router = APIRouter()
 
-api_router.include_router(organisations.router, prefix="/organisations", tags=["organisations"])
+api_router.include_router(
+    organisations.router, prefix="/organisations", tags=["organisations"]
+)

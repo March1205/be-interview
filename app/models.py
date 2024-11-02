@@ -4,6 +4,7 @@ from sqlmodel import SQLModel, Field, Relationship
 class Base(SQLModel):
     pass
 
+
 class CreateOrganisation(Base):
     name: str
 

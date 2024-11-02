@@ -16,6 +16,7 @@ if config.config_file_name is not None:
 # add your model's MetaData object here
 # for 'autogenerate' support
 from app.models import Base
+
 target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,
@@ -38,9 +39,7 @@ def run_migrations() -> None:
     )
     connectable = create_engine(sql_alchemy_url, echo=True)
     with connectable.connect() as connection:
-        context.configure(
-            connection=connection, target_metadata=target_metadata
-        )
+        context.configure(connection=connection, target_metadata=target_metadata)
 
         with context.begin_transaction():
             context.run_migrations()
