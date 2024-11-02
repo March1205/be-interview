@@ -1,6 +1,7 @@
 # Test Database
 test.db
-
+# Ignore SQLite database files
+*.db
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
